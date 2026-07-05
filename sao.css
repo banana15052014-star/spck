@@ -1,0 +1,202 @@
+/* Thiết lập chung toàn trang */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Nền tối sâu tạo cảm giác rạp phim */
+body {
+    background-color: #0d0d0f;
+    color: #e2e8f0;
+    line-height: 1.6;
+}
+
+/* Banner lớn trên cùng đầu trang */
+header {
+    background: linear-gradient(rgba(13, 13, 15, 0.6), rgba(13, 13, 15, 0.95)), 
+                url('https://hdqwalls.com') no-repeat center center/cover;
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+    text-shadow: 0 0 20px rgba(0, 168, 204, 0.4);
+}
+
+header p {
+    font-size: 1.1rem;
+    max-width: 650px;
+    color: #94a3b8;
+}
+
+/* Khung chứa nội dung chính */
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 24px;
+}
+
+/* Các khối nội dung lớn (Section) */
+section {
+    background: #151518;
+    padding: 35px;
+    margin-bottom: 35px;
+    border-radius: 16px;
+    border: 1px solid #222227;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Tiêu đề mục dùng màu xanh dương phát sáng nhẹ */
+h2 {
+    color: #00a8cc;
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding-bottom: 8px;
+    margin-bottom: 25px;
+    display: inline-block;
+    border-bottom: 3px solid #00a8cc;
+    text-shadow: 0 0 10px rgba(0, 168, 204, 0.3);
+}
+
+/* Khối giới thiệu tổng quan chia làm 2 phần */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.mt-10 {
+    margin-top: 12px;
+    color: #cbd5e1;
+}
+
+/* Danh sách thông tin phim */
+.info-list {
+    list-style: none;
+    margin-top: 20px;
+    background: #1a1a1f;
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: 1px solid #222227;
+}
+
+.info-list li {
+    margin-bottom: 10px;
+    color: #94a3b8;
+}
+
+.info-list strong {
+    color: #00a8cc;
+}
+
+/* Khối danh sách nhân vật - Ép chuẩn 3 cột, chống đè đè lỗi ảnh */
+.characters-grid {
+    display: grid ;
+    grid-template-columns: repeat(3, 1fr) ;
+    gap: 24px;
+    align-items: stretch;
+}
+
+/* Thẻ thông tin của từng nhân vật */
+.char-card {
+    background: #1a1a1f;
+    border: 1px solid #26262b;
+    border-radius: 14px;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: all 0.4s ease;
+}
+
+/* Hiệu ứng nổi lên và đổi màu viền khi rê chuột vào */
+.char-card:hover {
+    transform: translateY(-8px);
+    border-color: #00a8cc;
+    box-shadow: 0 12px 24px rgba(0, 168, 204, 0.15);
+}
+
+/* Ảnh nhân vật chống zoom, chống vỡ méo tỉ lệ ảnh */
+.char-img {
+    width: 100%;
+    height: 240px;
+    background-color: #0d0d0f;
+    object-fit: cover ;
+    display: block;
+    border-bottom: 1px solid #222227;
+}
+
+.char-info {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.char-info h3 {
+    margin-bottom: 8px;
+    color: #ffffff;
+    font-size: 1.25rem;
+}
+
+.char-info p {
+    font-size: 0.92rem;
+    color: #94a3b8;
+}
+
+/* Khung chứa Video Trailer chuẩn 16:9 */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    border: 1px solid #26262b;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Phần chân trang web */
+footer {
+    background-color: #070708;
+    color: #475569;
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+    font-size: 0.85rem;
+}
+
+/* Xử lý tương thích khi xem trên Máy tính bảng */
+@media (max-width: 992px) {
+    .characters-grid {
+        grid-template-columns: repeat(2, 1fr) ;
+    }
+}
+
+/* Xử lý tương thích khi xem trên Điện thoại di động */
+@media (max-width: 600px) {
+    .characters-grid {
+        grid-template-columns: 1fr ;
+    }
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+}

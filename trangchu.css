@@ -1,0 +1,156 @@
+/* ĐỊNH DẠNG CHUNG */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #141414; /* Màu nền tối đặc trưng */
+    color: #ffffff;
+}
+
+/* THANH MENU */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 4%;
+    background-color: #1a1a1a;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff5500; /* Màu cam thương hiệu */
+}
+
+.nav-links a {
+    color: #cccccc;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 16px;
+}
+
+.nav-links a.active, .nav-links a:hover {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.search-profile input {
+    padding: 8px;
+    background-color: #333;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.btn-login {
+    padding: 8px 15px;
+    background-color: #ff5500;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* BANNER LỚN */
+.hero-banner {
+    height: 60vh;
+    background-color: #2a2a2a; /* Thay bằng ảnh nền nếu muốn */
+    display: flex;
+    align-items: center;
+    padding: 0 4%;
+}
+
+.banner-content h1 {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.banner-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.btn-watch {
+    padding: 12px 25px;
+    font-size: 16px;
+    background-color: #ff5500;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* KHU VỰC DANH SÁCH PHIM */
+.content-container {
+    padding: 40px 4%;
+}
+
+.movie-section {
+    margin-bottom: 40px;
+}
+img{
+    height: 150px;
+   
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    margin-bottom: 8px;
+    transition: transform 0.2s;
+}
+.movie-section h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.movie-card {
+    cursor: pointer;
+}
+
+.card-thumb {
+    height: 150px;
+    background-color: #333; /* Ô giả lập ảnh bìa phim */
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    margin-bottom: 8px;
+    transition: transform 0.2s;
+}
+
+.movie-card:hover .card-thumb {
+    transform: scale(1.05);
+    background-color: #444;
+}
+
+.movie-card p {
+    font-size: 14px;
+    text-align: center;
+    color: #ddd;
+}
+
+/* CHÂN TRANG */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1a1a1a;
+    color: #666;
+    font-size: 14px;
+}
